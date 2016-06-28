@@ -3,4 +3,8 @@
 
 
 
+static void usage(void);
+static int command(int argc, char** argv);
+
+
 #endif // FILES_H_INCLUDED

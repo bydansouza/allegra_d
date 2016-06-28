@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1467136085 source:c:\git\allegra_d\code\allegra_d\files.c
+	<stdio.h>
+	<stdlib.h>
+	<getopt.h>
+	<unistd.h>
+	"files.h"
+
+1467136085 c:\git\allegra_d\code\allegra_d\files.h
+
+1467136159 source:c:\git\allegra_d\code\allegra_d\main.c
+	<stdio.h>
+	<stdlib.h>
+	<getopt.h>
+	<unistd.h>
+	"files.h"
+
