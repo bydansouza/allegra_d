@@ -22,14 +22,13 @@ int main(void)
     }
  
     
-    float x = 0;
-
-    int x_aux=0;
-    int x_aux2=80;
+    float x = 30;
+    float x2=30;
+    int x_aux=80;
     int y_aux=80;
     
     int dir_x = 1, dir_y = 1;
-    //no maximo 8 quadrados
+ 
     while (!sair)
     {
         if (!al_is_event_queue_empty(fila_eventos))
@@ -41,37 +40,25 @@ int main(void)
             {
                 sair = true;
             }
-        }
-
-
+        } 
         
-        
-        if(x<x_aux2){            
-            al_draw_filled_rectangle(0, 0, x_aux,80, al_map_rgb(255, 0, 0));
-            x_aux++;            
-        }
-        else{ //fazer a função for para um numero de tarefas e discretizar de acordo
-            //for...            
-            al_draw_filled_rectangle(x-80, 0, x+x_aux2-80,80, al_map_rgb(255, 0, 0));
-        }
-        
-        //al_draw_filled_rectangle(x, 0, x+x_aux,80, al_map_rgb(255, 0, 0));        
-        //al_draw_filled_rectangle(x+2*x_aux, 0,x+4*x_aux,80, al_map_rgb(255, 0, 0));
-        
-        //criar o fade out dos negocios
-        //implementar o fade in para o for
+        al_draw_filled_rectangle(x, 0, x+x_aux,80, al_map_rgb(255, 0, 0));
+        al_draw_filled_rectangle(x+2*x_aux, 0,x+4*x_aux,80, al_map_rgb(255, 0, 0));
         
         al_flip_display();
         al_clear_to_color(al_map_rgb(0, 0, 0));
         x += 1.0 * dir_x;
         //y += 1.0 * dir_y;
 
-
+        /*if(x+3*x_aux>=LARGURA_TELA){
+            al_draw_filled_rectangle(0, 0, x2+x_aux,80, al_map_rgb(255, 0, 0));
+            //al_draw_filled_rectangle(x2+2*x_aux, 0,x2+3*x_aux,80, al_map_rgb(255, 0, 0)); 
+            x2+=1.0*dir_x;
+        }
  
-        if (x>= LARGURA_TELA)
+        else*/ if (x>= LARGURA_TELA)
         {            
             x = 0;
-            x_aux=0;            
         } 
  
         
